@@ -164,7 +164,7 @@
             <h3>Description</h3>
             <input
               type="text"
-              placeholder="{{edit.description}}"
+              placeholder="{{edit.body}}"
               ng-model="$ctrl.edit.description"
             />
             <div class="buttons">
@@ -191,13 +191,12 @@
       <div id="delete-post" ng-if="currentView === 'deleteView'">
         <div class="container">
           <h1 class="title">Are you sure?</h1>
-          <h2>"It was good while it lasted. I'm going to miss you..."</h2>
           <p class="del-notice">
             Are you sure you want to delete {{delete.name}} from your life?
           </p>
           <div class="buttons">
             <button
-              class="submit"
+              class="btn btn-danger"
               type="submit"
               name="button"
               ng-click="submitDelete()"
@@ -205,7 +204,7 @@
               <i class="fa fa-check-circle" aria-hidden="true"></i> I'm Sure
             </button>
             <button
-              class="default"
+              class="btn btn-default"
               type="button"
               ng-click="changeView('listView')"
             >
